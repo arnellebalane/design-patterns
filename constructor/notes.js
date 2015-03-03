@@ -3,6 +3,10 @@ var a = {};
 var b = Object.create(Object.prototype);
 var c = new Object();
 
+
+
+
+
 // four ways to assign and retrieve keys and values to an object
 var object = {};
 
