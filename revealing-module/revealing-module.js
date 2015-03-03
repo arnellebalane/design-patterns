@@ -27,3 +27,6 @@ var module = (function() {
     return { greet: greet, set: set_greeting };
 });
 
+module.greet();
+module.set('Hi, world!');
+
