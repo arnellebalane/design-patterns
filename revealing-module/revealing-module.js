@@ -1,5 +1,6 @@
 /**
  * the revealing module pattern
+ *
  * simply defining all the functions and variables, private or public,
  * inside the scope of the module and just return an anonymous object
  * with pointers to these members that we wish to reveal as public

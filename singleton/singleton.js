@@ -1,5 +1,6 @@
 /**
  * the singleton pattern
+ *
  * restricts instantiation of a certain class to a single object
  *
  * if the class has not been instantiated yet, create a new instance

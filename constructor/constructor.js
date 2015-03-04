@@ -15,6 +15,7 @@
 
 /**
  * a basic constructor
+ *
  * problems with this implementation:
  *    - makes inheritance difficult
  *    - functions (e.g. toString) are redefined for each new instance of the
@@ -43,6 +44,7 @@ console.log(mondeo);
 
 /**
  * constructor with prototypes
+ *
  * advantages of this implementation:
  *    - when instantiating a new object from the contructor, all properties in
  *      the constructor's prototype are then made available to that instance

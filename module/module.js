@@ -1,5 +1,6 @@
 /**
  * a module defined using object literal notation
+ *
  * advantages:
  *    - can assist in encapsulating and organizing code
  * disadvantages (for me):
@@ -30,6 +31,7 @@ module.display_property();
 
 /**
  * the module pattern
+ *
  * advantages:
  *    - provide both public and private encapsulation to further emulate
  *      the concept of classes
@@ -71,6 +73,7 @@ module.reset();
 
 /**
  * import mixins
+ *
  * a variation of the module pattern where globals (e.g. jQuery) can be passed
  * as arguments to the modules's anonymous function, allowing us to import them
  * and locally alias
