@@ -28,13 +28,12 @@ Object.defineProperty(object, 'key', {
 
 // 4. Object.defineProperties (ES5 only, retrieving values is same as 1 and 2)
 Object.defineProperties(object, {
-    'key': {
+    key: {
         value: 'value',
         writable: true
     },
-    'another_key': {
+    anotherKey: {
         value: 'another value',
         writable: true
     }
 });
-

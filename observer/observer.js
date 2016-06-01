@@ -1,17 +1,17 @@
 /**
- * the observer pattern
+ *  the observer pattern
  *
- * an object (subject) maintains a list of objects depending on it
- * (observers), automatically notifying then of any change to state
+ *  an object (subject) maintains a list of objects depending on it
+ *  (observers), automatically notifying then of any change to state
  *
- * when the subject needs to notify observers about something of
- * interest, it broadcasts a notification to the observers which can
- * include specific data related to what the notification is about
+ *  when the subject needs to notify observers about something of interest,
+ *  it broadcasts a notification to the observers which can include specific
+ *  data related to what the notification is about
  *
- * when a particular observer no longer wishes to be notified of
- * changes by the subject they are registered to, the subject can
- * remove it from its list of observers
- */
+ *  when a particular observer no longer wishes to be notified of changes by
+ *  the subject they are registered to, the subject can remove it from its list
+ *  of observers
+ **/
 function ObserverList() {
     this.observers = [];
 }
@@ -50,11 +50,11 @@ function Subject() {
     this.observers = new ObserverList();
 }
 
-Subject.prototype.add_observer = function(observer) {
+Subject.prototype.addObserver = function(observer) {
     this.observers.add(observer);
 };
 
-Subject.prototype.remove_observer = function(observer) {
+Subject.prototype.removeObserver = function(observer) {
     this.observers.remove(observer);
 };
 
@@ -63,12 +63,3 @@ Subject.prototype.notify = function(data) {
         this.observers.get(i).update(data);
     }
 };
-
-
-
-function Observer() {
-    this.update = function(data) {
-        console.log(data);
-    };
-}
-
