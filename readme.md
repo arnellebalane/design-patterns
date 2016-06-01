@@ -10,4 +10,5 @@ from Addy Osmani's book _Learning Javascript Design Patterns_
 - Module Pattern
 - Revealing Module Pattern
 - Observer Pattern
-
+- Mediator Pattern
+- Prototype Pattern
