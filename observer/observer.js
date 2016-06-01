@@ -17,7 +17,7 @@ function ObserverList() {
 }
 
 ObserverList.prototype.add = function(observer) {
-    return this.observer.push(observer);
+    return this.observers.push(observer);
 };
 
 ObserverList.prototype.count = function() {
@@ -63,3 +63,46 @@ Subject.prototype.notify = function(data) {
         this.observers.get(i).update(data);
     }
 };
+
+
+
+function Observer() {
+    this.update = function() {};
+}
+
+
+
+// Observer pattern example usage
+
+function extend(base, extension) {
+    for (var key in extension) {
+        base[key] = extension[key];
+    }
+}
+
+
+
+var subject = {
+    emit: function(event) {
+        this.notify(event);
+    }
+};
+extend(subject, new Subject());
+
+
+
+var observer = {
+    listen: function(data) {
+        console.log('observer.listen:', data);
+    }
+};
+extend(observer, new Observer());
+
+observer.update = function(data) {
+    this.listen(data);
+};
+
+
+
+subject.addObserver(observer);
+subject.emit('event');
